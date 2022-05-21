@@ -32,6 +32,7 @@ import Alamofire // 1
 class MainTableViewController: UITableViewController {
   var items: [Displayable] = []
   var selectedItem: Displayable?
+  var films: [Film] = []
   
   @IBOutlet weak var searchBar: UISearchBar!
   
@@ -69,9 +70,15 @@ class MainTableViewController: UITableViewController {
 // MARK: - UISearchBarDelegate
 extension MainTableViewController: UISearchBarDelegate {
   func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+    guard let shipName = searchBar.text else { return }
+    searchStarships(for: shipName)
   }
   
   func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+    searchBar.text = nil
+    searchBar.resignFirstResponder()
+    items = films
+    tableView.reloadData()
   }
 }
 
@@ -82,8 +89,25 @@ extension MainTableViewController {
       .validate()
       .responseDecodable(of: Films.self) { (response) in
         guard let films = response.value else { return }
+        self.films = films.all
         self.items = films.all
         self.tableView.reloadData()
       }
+  }
+  
+  func searchStarships(for name: String) {
+    // 1
+    let url = "https://swapi.dev/api/starships"
+    // 2
+    let parameters: [String: String] = ["search": name]
+    // 3
+    AF.request(url, parameters: parameters)
+      .validate()
+      .responseDecodable(of: Starships.self) { response in
+        // 4
+        guard let starships = response.value else { return }
+        self.items = starships.all
+        self.tableView.reloadData()
+    }
   }
 }
