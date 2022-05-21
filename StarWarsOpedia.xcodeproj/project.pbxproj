@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		183D953D23DF5A4700845F5F /* Displayable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183D953C23DF5A4700845F5F /* Displayable.swift */; };
 		5394F02521864DF5006E754C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5394F02321864DF4006E754C /* LaunchScreen.storyboard */; };
+		59C4A90E28392C2C00B89916 /* Films.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59C4A90D28392C2C00B89916 /* Films.swift */; };
 		6B2A81D738A340AD12B54972 /* Pods_StarWarsOpedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4884293E01387DDB245CC1FF /* Pods_StarWarsOpedia.framework */; };
 		D2A5F2091F4A9144005CD714 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2A5F2071F4A9144005CD714 /* Main.storyboard */; };
 		D2A5F2211F4A96D0005CD714 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A5F2201F4A96D0005CD714 /* AppDelegate.swift */; };
@@ -22,6 +23,7 @@
 		3C3575AC179B46F2E2D990C6 /* Pods-StarWarsOpedia.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StarWarsOpedia.release.xcconfig"; path = "Target Support Files/Pods-StarWarsOpedia/Pods-StarWarsOpedia.release.xcconfig"; sourceTree = "<group>"; };
 		4884293E01387DDB245CC1FF /* Pods_StarWarsOpedia.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StarWarsOpedia.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5394F02421864DF4006E754C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		59C4A90D28392C2C00B89916 /* Films.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Films.swift; sourceTree = "<group>"; };
 		BE9F74ECC6ADA9E64E221425 /* Pods-StarWarsOpedia.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StarWarsOpedia.debug.xcconfig"; path = "Target Support Files/Pods-StarWarsOpedia/Pods-StarWarsOpedia.debug.xcconfig"; sourceTree = "<group>"; };
 		D2A5F2001F4A9144005CD714 /* StarWarsOpedia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StarWarsOpedia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2A5F2081F4A9144005CD714 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -48,6 +50,7 @@
 			isa = PBXGroup;
 			children = (
 				183D953C23DF5A4700845F5F /* Displayable.swift */,
+				59C4A90D28392C2C00B89916 /* Films.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -229,6 +232,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D2A5F2211F4A96D0005CD714 /* AppDelegate.swift in Sources */,
+				59C4A90E28392C2C00B89916 /* Films.swift in Sources */,
 				E087AADA23620E3B00D1E33E /* MainTableViewController.swift in Sources */,
 				183D953D23DF5A4700845F5F /* Displayable.swift in Sources */,
 				E087AAD923620E3B00D1E33E /* DetailViewController.swift in Sources */,
