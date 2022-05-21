@@ -31,6 +31,7 @@ import Alamofire // 1
 
 class MainTableViewController: UITableViewController {
   var items: [Displayable] = []
+  var selectedItem: Displayable?
   
   @IBOutlet weak var searchBar: UISearchBar!
   
@@ -53,6 +54,7 @@ class MainTableViewController: UITableViewController {
   }
   
   override func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
+    selectedItem = items[indexPath.row]
     return indexPath
   }
   
@@ -60,7 +62,7 @@ class MainTableViewController: UITableViewController {
     guard let destinationVC = segue.destination as? DetailViewController else {
       return
     }
-    destinationVC.data = nil
+    destinationVC.data = selectedItem
   }
 }
 
